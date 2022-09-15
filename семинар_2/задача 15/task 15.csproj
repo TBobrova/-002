@@ -1,0 +1,29 @@
+// Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+int dayNumber = ReadInt("Введите число от 1 до 7 ");
+Console.WriteLine(WorkHoliday(dayNumber));
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+string WorkHoliday(int dayNumber)
+{
+    if (dayNumber > 0 || dayNumber < 8)
+    {
+        if (dayNumber == 7 || dayNumber == 6)
+        {
+            Console.Write( + dayNumber + " - Выходной");
+        }
+        else
+        {
+            Console.Write( + dayNumber + " - Рабочий");
+        }
+    }
+    else
+    {
+        Console.Write("Вы ввели число не в пределах от 1 до 7, поэтому не возможно определить");
+    }
+    return " день.";
+}
